@@ -1,0 +1,29 @@
+### Signup a user
+POST http://localhost:5000/user/sign-up
+Content-Type: application/json
+
+{
+  "name": "Hello World",
+  "email": "hello@gmail.com",
+  "password": "helloworld",
+  "type" : "user"
+}
+
+### Soft delete user
+DELETE http://localhost:5000/user/soft-delete/helloworld
+Content-Type: application/json
+
+### Hard delete admin
+DELETE http://localhost:5000/user/hard-delete/hello
+Content-Type: application/json
+
+
+
+### Resend verification
+POST http://localhost:5000/user/resend-verification
+Content-Type: application/json
+
+{
+  "email": "example@gmail.com",
+  "type": "user"
+}
